@@ -13,6 +13,8 @@ builder.Services.AddTransient<INGORepository, NGORepository>();
 
 builder.Services.AddTransient<IStateRepository, StateRepository>();
 
+builder.Services.AddTransient<ICityRepository, CityRepository>();
+
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
