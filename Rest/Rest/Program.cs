@@ -15,6 +15,8 @@ builder.Services.AddTransient<IStateRepository, StateRepository>();
 
 builder.Services.AddTransient<ICityRepository, CityRepository>();
 
+builder.Services.AddTransient<ICausesRepository, CausesRepository>();
+
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();

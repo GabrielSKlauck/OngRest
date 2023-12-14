@@ -19,7 +19,7 @@ namespace Rest.Repository
 
         public async Task Delete(int id)
         {
-            string sql = "DELETE FROM NGO WHERE Id = id";
+            string sql = "DELETE FROM NGO WHERE Id = @id";
             await Execute(sql, new {id});
         }
 
@@ -31,7 +31,7 @@ namespace Rest.Repository
 
         public async Task<NGOEntity> GetById(int id)
         {
-            string sql = "SELECT * FROM NGO WHERE Id = id";
+            string sql = "SELECT * FROM NGO WHERE Id = @id";
             return await GetConnection().QueryFirstAsync<NGOEntity>(sql, new {id});
         }
 
