@@ -9,7 +9,7 @@ namespace Rest.Contracts.Repository
 
         Task Update(NGOEntity ngo);
 
-        Task <IEnumerable<NGOEntity>> GetAll();
+        Task <IEnumerable<NGOEntity>> Get();
 
         Task <NGOEntity> GetById(int id);
 

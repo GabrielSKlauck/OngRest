@@ -32,7 +32,7 @@ namespace Rest.Controllers
 
         [HttpGet]
         public async Task<IActionResult> Get(){
-           return Ok(await _ngoRepository.GetAll());
+           return Ok(await _ngoRepository.Get());
 
         }
 

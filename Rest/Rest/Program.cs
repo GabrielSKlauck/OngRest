@@ -11,6 +11,8 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddTransient<INGORepository, NGORepository>();
 
+builder.Services.AddTransient<IStateRepository, StateRepository>();
+
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();

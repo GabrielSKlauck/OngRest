@@ -23,7 +23,7 @@ namespace Rest.Repository
             await Execute(sql, new {id});
         }
 
-        public async Task<IEnumerable<NGOEntity>> GetAll()
+        public async Task<IEnumerable<NGOEntity>> Get()
         {
             string sql = "SELECT * FROM NGO";
             return await GetConnection().QueryAsync<NGOEntity>(sql);
