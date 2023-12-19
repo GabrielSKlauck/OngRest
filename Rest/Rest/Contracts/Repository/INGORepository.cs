@@ -14,5 +14,7 @@ namespace Rest.Contracts.Repository
         Task <NGOEntity> GetById(int id);
 
         Task Delete(int id);
+
+        Task<NGOTokenDTO> Login(NGOLoginDTO ngo);
     }
 }

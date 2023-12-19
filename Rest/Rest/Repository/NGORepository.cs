@@ -1,15 +1,16 @@
 ﻿using Dapper;
 using Microsoft.AspNetCore.Mvc;
 using Rest.Contracts.Repository;
+using Rest.Infrastructure;
 using Rest.DTO;
 using Rest.Entity;
-using Rest.Infrastructure;
+using Infrastructure;
 
 namespace Rest.Repository
 {
     public class NGORepository : Connection, INGORepository
     {
-        
+
         public async Task Add(NGODTO ngo)
         {
             string sql = @"INSERT INTO NGO(NgoName, Site, HeadPerson, Telephone, Email, Password, CityId, CausesId)
@@ -20,7 +21,7 @@ namespace Rest.Repository
         public async Task Delete(int id)
         {
             string sql = "DELETE FROM NGO WHERE Id = @id";
-            await Execute(sql, new {id});
+            await Execute(sql, new { id });
         }
 
         public async Task<IEnumerable<NGOEntity>> Get()
@@ -32,9 +33,18 @@ namespace Rest.Repository
         public async Task<NGOEntity> GetById(int id)
         {
             string sql = "SELECT * FROM NGO WHERE Id = @id";
-            return await GetConnection().QueryFirstAsync<NGOEntity>(sql, new {id});
+            return await GetConnection().QueryFirstAsync<NGOEntity>(sql, new { id });
         }
 
+        public async Task<NGOTokenDTO> Login(NGOLoginDTO ngo)
+        {
+            string sql = "SELECT * FROM NGO WHERE Email = @Email AND Password = @Password";
+            NGOEntity ngoLogin = await GetConnection().QueryFirstAsync<NGOEntity>(sql, ngo);
+            return new NGOTokenDTO
+            {
+                Token = Authentication.GenerateToken(ngo)
+            };
+        }
         public async Task Update(NGOEntity ngo)
         {
             string sql = @"UPDATE NGO SET NgoName = @NgoName,
@@ -47,7 +57,8 @@ namespace Rest.Repository
                                           CausesId = @CausesId
                                           WHERE Id = @Id";
             await Execute(sql, ngo);
-                                          
         }
+       
     }
 }
+

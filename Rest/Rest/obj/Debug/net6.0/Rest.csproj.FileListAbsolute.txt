@@ -59,3 +59,10 @@ C:\Users\gabriel.klauck\OneDrive - SENAC-SC\Codigos\OngRest\OngRest\Rest\Rest\ob
 C:\Users\gabriel.klauck\OneDrive - SENAC-SC\Codigos\OngRest\OngRest\Rest\Rest\obj\Debug\net6.0\Rest.pdb
 C:\Users\gabriel.klauck\OneDrive - SENAC-SC\Codigos\OngRest\OngRest\Rest\Rest\obj\Debug\net6.0\Rest.genruntimeconfig.cache
 C:\Users\gabriel.klauck\OneDrive - SENAC-SC\Codigos\OngRest\OngRest\Rest\Rest\obj\Debug\net6.0\ref\Rest.dll
+C:\Users\gabriel.klauck\OneDrive - SENAC-SC\Codigos\OngRest\OngRest\Rest\Rest\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\gabriel.klauck\OneDrive - SENAC-SC\Codigos\OngRest\OngRest\Rest\Rest\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\gabriel.klauck\OneDrive - SENAC-SC\Codigos\OngRest\OngRest\Rest\Rest\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\gabriel.klauck\OneDrive - SENAC-SC\Codigos\OngRest\OngRest\Rest\Rest\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\gabriel.klauck\OneDrive - SENAC-SC\Codigos\OngRest\OngRest\Rest\Rest\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\gabriel.klauck\OneDrive - SENAC-SC\Codigos\OngRest\OngRest\Rest\Rest\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\gabriel.klauck\OneDrive - SENAC-SC\Codigos\OngRest\OngRest\Rest\Rest\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
