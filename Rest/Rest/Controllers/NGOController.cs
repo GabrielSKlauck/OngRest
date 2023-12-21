@@ -18,6 +18,7 @@ namespace Rest.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "admin")]
         
         public async Task<IActionResult> Add(NGODTO ngo)
         {
@@ -25,7 +26,7 @@ namespace Rest.Controllers
             return Ok();
         }
 
-        [Authorize]
+        [Authorize(Roles = "admin")]
         [HttpPut]
         public async Task<IActionResult> Update(NGOEntity ngo)
         {
@@ -33,20 +34,20 @@ namespace Rest.Controllers
             return Ok();
         }
 
-        [Authorize]
+        
         [HttpGet]  
         public async Task<IActionResult> Get(){           
            return Ok(await _ngoRepository.Get());                   
         }
 
-        [Authorize]
+        [Authorize(Roles = "admin, defoult")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
             return Ok(await _ngoRepository.GetById(id));
         }
 
-        [Authorize]
+        [Authorize(Roles = "admin")]
         [HttpDelete]
         public async Task<IActionResult> Delete(int id)
         {

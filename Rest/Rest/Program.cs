@@ -24,6 +24,8 @@ builder.Services.AddTransient<ICityRepository, CityRepository>();
 
 builder.Services.AddTransient<ICausesRepository, CausesRepository>();
 
+builder.Services.AddTransient<IAdsRepository, AdsRepository>();
+
 builder.Services.AddCors();
 
 var key = Encoding.ASCII.GetBytes(Configuration.JWTSecret);

@@ -5,6 +5,8 @@
         public int Id { get; set; }
         public string NgoName { get; set; }
 
+        public string Description { get; set; }
+
         public string Site { get; set; }
 
         public string HeadPerson { get; set; }
@@ -14,6 +16,8 @@
         public string Email { get; set; }
 
         public string Password { get; set; }
+
+        public string Role { get; set; }
 
         public int CityId { get; set; }
 
